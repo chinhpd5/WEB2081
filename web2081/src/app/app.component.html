@@ -1,4 +1,6 @@
-
+<!-- 
+  BTVN: xây dựng giao diện html bằng tailwind
+-->
 
 <div>
   <div>
@@ -8,10 +10,10 @@
   </div>
   <div>
     <!-- thông tin -->
-     <h2>Họ và tên: {{data.name}}</h2>
+     <h2 class="text-blue-">Họ và tên: {{data.name}}</h2>
      <h3>Tuổi: {{data.age}}</h3>
-     <h3>Giới tính: {{data.gender}}</h3>
+     <h3>Giới tính: {{renderGender()}}</h3>
      <h3>Mô tả: {{data.description}}</h3>
-     <a target="_blank" [href]="data.linkFB">Add friend</a>
+     <a target="" [href]="data.linkFB">Add friend</a>
   </div>
 </div>
