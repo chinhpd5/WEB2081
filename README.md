@@ -22,7 +22,7 @@
 - Angular Language Service
 - Tailwind CSS IntelliSense
 
-### PropertiBinding
+### Properti Binding
 ```
   data = {
     name: "chinhpd5",
