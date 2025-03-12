@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-
+import {CommonModule} from "@angular/common"
+// khi sử dụng các chỉ thị: ngFor, ngIF,... => import CommonModule
 @Component({
   selector: 'app-user',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
 })
