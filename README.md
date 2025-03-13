@@ -2,6 +2,30 @@
 
 # WEB2081
 
+## Buổi 2:
+
+### Cách tạo 1 component
+- Cách 1: Tạo thủ công
+
+- Cách 2: Sử dụng CLI
++ `ng generate component {ten-component}`
++ `ng g c {ten-component}`
+
+- Các option cần có trong 1 Component
+  + selector
+  + template / templateUrl
+  + styles / styleUrl / styleUrls
+
+- Các directive(chỉ thị) cơ bản thường dùng
+  (* để sử dụng các chỉ thị cần import `CommonModule` tại Component)
+ + ngFor
+ + ngIf
+ + ngSwitch
+ + ngClass
+ + ngStyle
+ + ...
+
+
 ## Buổi 1:
 
 ### Chuẩn bị
@@ -11,6 +35,13 @@
 - Kiểm tra: `ng v` hoặc `ng version`
 
 ### Cài đặt dự án Angular
+#### Cách 1
+- `npm create vite@latest`
+- Nhập tên project `web2081`
+- Chọn framework: `angular`
+- next ...
+
+#### Cách 2
 - `ng new {project-name}`, ví dụ: `ng new web2081`
 - stylesheet: Chọn `CSS`
 - enable Server-Side Rendering (SSR) and Static Site Generation: `N`
@@ -22,7 +53,7 @@
 - Angular Language Service
 - Tailwind CSS IntelliSense
 
-### PropertiBinding
+### Properti Binding
 ```
   data = {
     name: "chinhpd5",
@@ -56,7 +87,7 @@
 - Khoảng cách (margin/padding): `m-4`, `p-6`, `px-3`, `py-2`
   + m: margin, p: padding
   + l: left, t: top: r: right, b: botton. Ví dụ: mt: `margin-top`
-  + x: trục dọc, y: trục ngang
+  + x: trục ngang, y: trục dọc
   + 1,2,3,4,... : space. Công thức = space*0.25 rem, Ví dụ 8 -> 8 x 0.25 = 2 rem (1 rem = 16px) -> 32px
   + Ví dụ: mr-4: `margin-right: 16px` 
 - Flexbox và Grid: `flex`, `grid`, `justify-center`, `items-start`
@@ -81,6 +112,4 @@
       Nút
     </button>
   ```
-
-
-
+ 
