@@ -1,1 +1,35 @@
-<p>user works!</p>
+<h1>Danh sách user</h1>
+
+<table class="table-auto">
+  <thead>
+    <tr>
+      <th class="border">STT</th>
+      <th class="border">Họ và tên</th>
+      <th class="border">Tuổi</th>
+      <th class="border">Email</th>
+      <th class="border">Giới tính</th>
+      <th class="border">Trạng thái</th>
+      <th class="border">Vai trò</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="border">{{users[0].id}}</td>
+      <td class="border">{{users[0].name}}</td>
+      <td class="border">{{users[0].age}}</td>
+      <td class="border">{{users[0].email}}</td>
+      <td class="border">{{users[0].gender}}</td>
+      <td class="border">{{users[0].isActive}}</td>
+      <td class="border">{{users[0].role}}</td>
+    </tr>
+    <tr>
+      <td class="border">{{users[1].id}}</td>
+      <td class="border">{{users[1].name}}</td>
+      <td class="border">{{users[1].age}}</td>
+      <td class="border">{{users[1].email}}</td>
+      <td class="border">{{users[1].gender}}</td>
+      <td class="border">{{users[1].isActive}}</td>
+      <td class="border">{{users[1].role}}</td>
+    </tr>
+  </tbody>
+</table>
