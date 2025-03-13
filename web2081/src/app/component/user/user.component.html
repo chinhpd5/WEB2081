@@ -24,7 +24,7 @@
         <td class="border" [ngClass]="{'text-red-500': user.gender, 'text-green-500': !user.gender}" >Nữ</td>
       </ng-template>
 
-      <td class="border">{{user.isActive}}</td>
+      <td class="border">{{renderStatus(user.isActive)}}</td>
       <td class="border" [ngSwitch]="user.role">
         <span [ngStyle]="{'background-color': user.role == 'admin'? 'red': user.role == 'member'? 'blue': 'yellow'}" *ngSwitchCase="'admin'">Quản trị viên</span>
         <span [ngStyle]="{'background-color': user.role == 'admin'? 'red': user.role == 'member'? 'blue': 'yellow'}" *ngSwitchCase="'member'">Người dùng</span>

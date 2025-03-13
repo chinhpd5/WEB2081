@@ -38,4 +38,8 @@ export class UserComponent {
       role: 'member',
     },
   ];
+
+  renderStatus(status: boolean): string{
+    return status ? 'Kích hoạt': 'Không kích hoạt'
+  }
 }
