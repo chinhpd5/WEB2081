@@ -17,6 +17,7 @@
   + styles / styleUrl / styleUrls
 
 - Các directive(chỉ thị) cơ bản thường dùng
+  (* để sử dụng các chỉ thị cần import `CommonModule` tại Component)
  + ngFor
  + ngIf
  + ngSwitch
