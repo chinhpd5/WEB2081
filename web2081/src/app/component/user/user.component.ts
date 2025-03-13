@@ -37,4 +37,8 @@ export class UserComponent {
       role: 'member',
     },
   ];
+
+  renderStatus(status: boolean): string {
+    return status ? 'Đang kích hoạt' : 'Chưa kích hoạt';
+  }
 }
