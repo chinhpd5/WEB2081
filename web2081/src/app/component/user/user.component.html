@@ -19,16 +19,16 @@
       <td class="border">{{user.age}}</td>
       <td class="border">{{user.email}}</td>
       
-      <td class="border" *ngIf="user.gender;else fallback">Nam</td>
+      <td class="border" [ngClass]="{'text-red-500': user.gender, 'text-green-500': !user.gender}" *ngIf="user.gender;else fallback">Nam</td>
       <ng-template #fallback>
-        <td class="border" >Nữ</td>
+        <td class="border" [ngClass]="{'text-red-500': user.gender, 'text-green-500': !user.gender}" >Nữ</td>
       </ng-template>
 
       <td class="border">{{user.isActive}}</td>
       <td class="border" [ngSwitch]="user.role">
-        <span *ngSwitchCase="'admin'">Quản trị viên</span>
-        <span *ngSwitchCase="'member'">Người dùng</span>
-        <span *ngSwitchDefault>Khách</span>
+        <span [ngStyle]="{'background-color': user.role == 'admin'? 'red': user.role == 'member'? 'blue': 'yellow'}" *ngSwitchCase="'admin'">Quản trị viên</span>
+        <span [ngStyle]="{'background-color': user.role == 'admin'? 'red': user.role == 'member'? 'blue': 'yellow'}" *ngSwitchCase="'member'">Người dùng</span>
+        <span [ngStyle]="{'background-color': user.role == 'admin'? 'red': user.role == 'member'? 'blue': 'yellow'}" *ngSwitchDefault>Khách</span>
       </td>
     </tr>
     
