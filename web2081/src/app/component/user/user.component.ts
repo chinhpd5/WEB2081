@@ -26,7 +26,7 @@ export class UserComponent {
       age: 30,
       gender: false,
       isActive: false,
-      role: 'admin',
+      role: '',
     },
     {
       id: 3,

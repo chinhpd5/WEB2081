@@ -18,9 +18,18 @@
       <td class="border">{{user.name}}</td>
       <td class="border">{{user.age}}</td>
       <td class="border">{{user.email}}</td>
-      <td class="border">{{user.gender}}</td>
+      
+      <td class="border" *ngIf="user.gender;else fallback">Nam</td>
+      <ng-template #fallback>
+        <td class="border" >Nữ</td>
+      </ng-template>
+
       <td class="border">{{user.isActive}}</td>
-      <td class="border">{{user.role}}</td>
+      <td class="border" [ngSwitch]="user.role">
+        <span *ngSwitchCase="'admin'">Quản trị viên</span>
+        <span *ngSwitchCase="'member'">Người dùng</span>
+        <span *ngSwitchDefault>Khách</span>
+      </td>
     </tr>
     
   </tbody>
