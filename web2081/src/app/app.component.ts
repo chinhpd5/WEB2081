@@ -2,15 +2,18 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from "./component/header/header.component";
 import { UserComponent } from './component/user/user.component';
 import { TodolistComponent } from "./component/todolist/todolist.component";
+import { ProductComponent } from "./component/product/product.component";
 
 @Component({
   selector: 'app-root',
-  imports: [TodolistComponent],
+  imports: [TodolistComponent, ProductComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  // title = 'web2081';
+  myName= 'chinhpd5'
+  myAge= 25
+  
   data = {
     name: "chinhpd5",
     age: 20,
