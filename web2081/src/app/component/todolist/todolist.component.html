@@ -1,0 +1,8 @@
+
+<h1>Danh sách công việc</h1>
+
+<ul>
+  @for (item of jobs; track $index) {
+    <li>{{$index+ 1}}. {{item}}</li>
+  }
+</ul>
