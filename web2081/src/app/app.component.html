@@ -4,7 +4,7 @@
 
 <!-- <app-todolist></app-todolist> -->
 
-<app-product [name]="myName" [age]="myAge"/>
+<app-product (deleteId)="receiveId($event)" [name]="myName" [age]="myAge" [products]="products"/>
 
 
 
