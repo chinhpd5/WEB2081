@@ -11,6 +11,10 @@ export class ProductComponent {
   @Input({required: true}) age!: number;
   @Input({required: true}) products: any;
 
+  renderStatus(status: Boolean){
+    return status ? "Còn hàng": "Hết hàng"
+  }
+
 
   /**
    * Tạo component 'product'
