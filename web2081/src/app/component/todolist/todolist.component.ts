@@ -22,4 +22,10 @@ export class TodolistComponent {
     this.jobs.push(this.job)
     this.job =""
   }
+  handleDelete(i: number){
+    // console.log(i);
+    // this.jobs.splice(i,1)
+    this.jobs = this.jobs.filter((item,index)=> index != i)
+    
+  }
 }
