@@ -1,5 +1,11 @@
-<p>todolist works!</p>
+<input type="text" class="border" [(ngModel)]="job">
+<button (click)="handleAddJob()" class="px-3 border rounded hover:bg-blue-300">Add job</button>
 
 <ul>
-  <li></li>
+  @for (item of jobs; track $index) {
+    <li>
+      {{$index+1}}. {{item}}
+      <button class="px-3 rounded border hover:bg-red-400">Xóa</button>
+    </li>
+  }
 </ul>
