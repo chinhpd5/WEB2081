@@ -1,6 +1,10 @@
-<input type="text" class="border" [(ngModel)]="job">
+<input type="text" class="border" 
+  [(ngModel)]="job">
 
-<button (click)="handleAddJob()" class="px-3 border hover:bg-blue-300 rounded">Add Job</button>
+<button (click)="handleAddJob()" 
+  class="px-3 border hover:bg-blue-300 rounded">
+Add Job
+</button>
 
 <h1>Danh sách công việc</h1>
 
@@ -8,7 +12,9 @@
   @for (item of jobs; track $index) {
     <li>
       {{$index+1}}. {{item}}
-      <button class="px-3 border hover:bg-red-300 rounded">Xóa</button>
+      <button (click)="handleDeleteJob($index)" class="px-3 border hover:bg-red-300 rounded">
+        Xóa
+      </button>
     </li>
   }
 </ul>
