@@ -66,4 +66,9 @@ export class AppComponent {
       rating: 4.3,
     },
   ];
+
+  receiverId(id: number){
+    // console.log(id);
+    this.products = this.products.filter((item)=> item.id != id)
+  }
 }

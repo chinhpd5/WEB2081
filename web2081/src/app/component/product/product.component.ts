@@ -1,8 +1,9 @@
-import { Component,Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component,EventEmitter,Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-product',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })
@@ -11,8 +12,15 @@ export class ProductComponent {
   @Input({required: true}) age!: number;
   @Input({required: true}) products: any;
 
+  @Output() deleteId = new EventEmitter();
+
   renderStatus(status: Boolean){
     return status ? "Còn hàng": "Hết hàng"
+  }
+
+  hanldeDelete(id: number){
+    // console.log(id);
+    this.deleteId.emit(id)
   }
 
 
