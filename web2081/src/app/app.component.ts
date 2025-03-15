@@ -58,6 +58,11 @@ export class AppComponent {
     },
   ];
 
+  receiveId(id: number){
+    // console.log(id);
+    this.products = this.products.filter(item=> item.id != id)
+  }
+
   // title = 'web2081';
   data = {
     name: "chinhpd5",

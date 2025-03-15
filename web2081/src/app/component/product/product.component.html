@@ -43,7 +43,9 @@
           }
         </td>
         <td class="border">{{item.rating}}</td>
-        <td class="border"></td>
+        <td class="border">
+          <button (click)="handleDelete(item.id)" class="px-3 rounded border hover:bg-red-400">Xóa</button>
+        </td>
       </tr>
     }
   </tbody>

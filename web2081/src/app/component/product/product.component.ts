@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-product',
@@ -12,8 +12,15 @@ export class ProductComponent {
   @Input() age!: number
   @Input() products!: any;
 
+  @Output() deleteId = new EventEmitter()
+
   renderSatus(status: boolean){
     return status ? 'Còn hàng': 'Hết hàng'
+  }
+
+  handleDelete(id:number){
+    // console.log(id);
+    this.deleteId.emit(id); //gửi dữ liệu qua parent
   }
 
   /**
