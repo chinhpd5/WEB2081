@@ -29,7 +29,7 @@ export class LifecycleComponent {
   ngAfterViewInit() {
     console.log('ngAfterViewInit called');
   }
-  ngAfterContentChecked() {
+  ngAfterViewChecked() {
     console.log('ngAfterViewChecked called');
   }
   ngOnDestroy() {
