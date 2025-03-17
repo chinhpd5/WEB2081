@@ -82,7 +82,7 @@
     }
   ```
 
-### Rounter
+### Router
 - Angular Router là một module mạnh mẽ giúp điều hướng giữa các trang trong ứng dụng Angular
 - Cài đặt (nếu chưa có): `ng add @angular/router`
 - Nơi quản lý: `src/app/app.routes.ts`
