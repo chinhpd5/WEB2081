@@ -1,10 +1,15 @@
+<button class="border rounded" (click)="handleDisplay()">Thay đổi visible</button>
+@if(isVisible){
+  <app-lifecycle [data]="'chinhpd5'"></app-lifecycle>
+}
+
 <!-- <app-header></app-header>
 
 <app-user></app-user> -->
 
 <!-- <app-todolist></app-todolist> -->
 
-<app-product (deleteId)="receiveId($event)" [name]="myName" [age]="myAge" [products]="products"/>
+<!-- <app-product (deleteId)="receiveId($event)" [name]="myName" [age]="myAge" [products]="products"/> -->
 
 
 

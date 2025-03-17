@@ -3,14 +3,20 @@ import { HeaderComponent } from "./component/header/header.component";
 import { UserComponent } from './component/user/user.component';
 import { TodolistComponent } from "./component/todolist/todolist.component";
 import { ProductComponent } from "./component/product/product.component";
+import { LifecycleComponent } from "./component/lifecycle/lifecycle.component";
 
 @Component({
   selector: 'app-root',
-  imports: [TodolistComponent, ProductComponent],
+  imports: [TodolistComponent, ProductComponent, LifecycleComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  isVisible = true
+  handleDisplay(){
+    this.isVisible = !this.isVisible;
+  }
+
   myName= 'chinhpd5'
   myAge= 25
   products = [
