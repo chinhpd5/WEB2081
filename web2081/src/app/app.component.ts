@@ -13,6 +13,12 @@ import { LifecycleComponent } from "./component/lifecycle/lifecycle.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  isVisible = true
+
+  handleChangeComponent(){
+    this.isVisible = !this.isVisible
+  }
+
   title = 'web2081';
   data = {
     name: "chinhpd5",

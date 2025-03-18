@@ -1,4 +1,8 @@
-<app-lifecycle [name]="'chinhpd5'"></app-lifecycle>
+@if(isVisible){
+  <app-lifecycle [name]="'chinhpd5'"></app-lifecycle>
+}
+
+<button class="border rounded" (click)="handleChangeComponent()">Show/hide Component</button>
 
 
 <!-- <app-product (deleteId)="receiverId($event)" [name]="myName" [age]="myAge" [products]="products"/> -->
