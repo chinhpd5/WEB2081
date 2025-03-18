@@ -4,10 +4,11 @@ import { HeaderCompnent } from './component/header/header.component';
 import { UserComponent } from "./component/user/user.component";
 import { ProductComponent } from "./component/product/product.component";
 import { TodolistComponent } from "./component/todolist/todolist.component";
+import { LifecycleComponent } from "./component/lifecycle/lifecycle.component";
 
 @Component({
   selector: 'app-root',
-  imports: [TodolistComponent, ProductComponent],
+  imports: [TodolistComponent, ProductComponent, LifecycleComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
