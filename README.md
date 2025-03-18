@@ -5,6 +5,10 @@
 ## Buổi 4: Lifecycle và Router
 
 ### Angular Lifecycle Hooks
+- contructor
+  + Hàm khởi tạo
+  + Chạy đầu tiên khi 1 class được khởi tạo
+
 - ngOnChanges(changes: SimpleChanges)
   + Được gọi khi một hoặc nhiều @Input() properties thay đổi.
   + Sử dụng để theo dõi sự thay đổi của dữ liệu đầu vào từ component cha.
