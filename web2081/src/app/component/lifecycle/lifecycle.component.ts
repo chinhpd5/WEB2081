@@ -28,9 +28,24 @@ export class LifecycleComponent {
   ngOnInit() {
     console.log('ngOnInit called');
   }
-
+ 
   // gọi lại mỗi khi component có sự thay đổi
   ngDoCheck() {
     console.log('ngDoCheck called');
+  }
+
+  // chạy 1 lần duy nhất sau khi view được render
+  ngAfterViewInit() {
+    console.log('ngAfterViewInit called');
+  }
+
+  // gọi lại mỗi khi có sự thay đổi giao diện
+  ngAfterViewChecked() {
+    console.log('ngAfterViewChecked called');
+  }
+
+  // chỉ được gọi khi component bị distroy
+  ngOnDestroy() {
+    console.log('ngOnDestroy called');
   }
 }

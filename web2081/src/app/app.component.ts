@@ -15,6 +15,11 @@ import { LifecycleComponent } from "./component/lifecycle/lifecycle.component";
 })
 
 export class AppComponent {
+  isVisible= true
+  handleChangeVisible(){
+    this.isVisible = !this.isVisible
+  }
+
   value='chinhpd5'
   handleChangeInput(){
     this.value = 'chinhpd5 new'

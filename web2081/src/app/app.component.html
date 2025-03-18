@@ -1,4 +1,7 @@
-<app-lifecycle [name]="value"></app-lifecycle>
+@if(isVisible){
+  <app-lifecycle [name]="value"></app-lifecycle>
+}
+<button (click)="handleChangeVisible()" class="border rounded">Show/Hide</button>
 <button (click)="handleChangeInput()" class="border rounded">ChangeInput</button>
 <!-- <app-product (deleteId)="receiveId($event)" [name]="myName" [age]="myAge" [products]="products"/> -->
 
