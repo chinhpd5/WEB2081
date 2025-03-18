@@ -2,6 +2,202 @@
 
 # WEB2081
 
+## Buổi 4: Lifecycle và Router
+
+### Angular Lifecycle Hooks
+- contructor
+  + Hàm khởi tạo
+  + Chạy đầu tiên khi 1 class được khởi tạo
+
+- ngOnChanges(changes: SimpleChanges)
+  + Được gọi khi một hoặc nhiều @Input() properties thay đổi.
+  + Sử dụng để theo dõi sự thay đổi của dữ liệu đầu vào từ component cha.
+  + Ví dụ: 
+  ```
+    ngOnChanges(changes: SimpleChanges) {
+      console.log('ngOnChanges called ', changes);
+    }
+  ```
+
+- ngOnInit()
+  + Được gọi một lần sau khi component khởi tạo xong.
+  + Sử dụng để khởi tạo dữ liệu, gọi API hoặc thực hiện các tác vụ cần thiết ngay sau khi component được tạo.
+  + Ví dụ:
+  ```
+    ngOnInit() {
+      console.log('ngOnInit called');
+    }
+  ```
+
+- ngDoCheck()
+  + Được gọi sau mỗi lần Angular kiểm tra sự thay đổi (change detection cycle).
+  + Sử dụng để theo dõi các thay đổi không được phát hiện bởi ngOnChanges.
+  + Ví dụ:
+  ```
+    ngDoCheck() {
+      console.log('ngDoCheck called');
+    }
+  ```
+
+- ngAfterContentInit() *
+  + Được gọi sau khi nội dung từ component cha được chèn vào (ng-content).
+  + Ví dụ:
+  ```
+    ngAfterContentInit() {
+      console.log('ngAfterContentInit called');
+    }
+  ```
+
+- ngAfterContentChecked() *
+  + Được gọi sau mỗi lần change detection của nội dung được chèn vào.
+  + Ví dụ:
+  ```
+    ngAfterContentChecked() {
+      console.log('ngAfterContentChecked called');
+    }
+  ```
+
+- ngAfterViewInit() 
+  + Được gọi sau khi view của component hoặc view của các component con được khởi tạo.
+  + Sử dụng để thao tác với các phần tử trong template.
+  + Ví dụ:
+  ```
+    ngAfterViewInit() {
+      console.log('ngAfterViewInit called');
+    }
+  ```
+
+- ngAfterViewChecked()
+  + Được gọi sau mỗi lần angular kiểm tra nội dung của view được chèn vào.
+  + Ví dụ:
+  ```
+    ngAfterContentChecked() {
+      console.log('ngAfterViewChecked called');
+    }
+  ```
+
+- ngOnDestroy()
+  + Được gọi khi component bị hủy.
+  + Sử dụng để dọn dẹp bộ nhớ, hủy subscriptions.
+  + Ví dụ:
+  ```
+    ngOnDestroy() {
+      console.log('ngOnDestroy called');
+    }
+  ```
+
+### Router
+- Angular Router là một module mạnh mẽ giúp điều hướng giữa các trang trong ứng dụng Angular
+- Cài đặt (nếu chưa có): `ng add @angular/router`
+- Nơi quản lý: `src/app/app.routes.ts`
+- Thành phần của 1 route:
+  + `path`: Chuỗi định nghĩa đường dẫn URL (ví dụ: `home`, `about`, `products/:id`).
+  + `component`: Nội dung Component hiển thị tương ứng khi truy cập đường dẫn.
+  + `children`: Định nghĩa các tuyến đường con (nested routes).
+  + `redirectTo`: Chuyển hướng URL từ đường dẫn này sang đường dẫn khác.
+  + `pathMatch`: Kiểu khớp đường dẫn, thường là 'full' hoặc 'prefix'.
+  + `canActivate`: Bảo vệ tuyến đường, chỉ cho phép truy cập nếu điều kiện được thỏa mãn.
+  + `canActivateChild`: Bảo vệ các tuyến đường con.
+  + `canDeactivate`: Xác nhận trước khi rời khỏi một tuyến đường.
+  + `canLoad`: Kiểm tra trước khi tải một mô-đun (lazy loading).
+  + `data`: Chứa dữ liệu tùy chỉnh có thể truy cập trong ActivatedRoute.
+  + `resolve`: Tiền xử lý dữ liệu trước khi tải trang.
+  + `runGuardsAndResolvers`: Xác định cách bảo vệ và bộ phân giải hoạt động lại khi URL thay đổi.
+
+- Cách chuyển hướng, 
+  + HTML Sử dụng `routerLink`, ví dụ: `<a routerLink="/">Home</a>` hoặc `<button routerLink="/about">Go to About</button>`
+  + TS sử dụng `Router`, ví dụ: 
+  ```
+    constructor(private router: Router) {}
+    goToHome() {
+      this.router.navigate(['/home']);
+    }
+  ```
+## Buổi 3: Two way binding, Input và Ouput
+
+### Two way binding
+- Two-way binding trong Angular là một kỹ thuật giúp đồng bộ hóa dữ liệu giữa model (dữ liệu trong component) và view (giao diện hiển thị). Điều này có nghĩa là khi dữ liệu thay đổi trong component, giao diện cũng thay đổi theo, và ngược lại khi người dùng cập nhật giá trị trên giao diện, dữ liệu trong component cũng được cập nhật.
+- Ví dụ:
+  + TS: 
+  ```
+    import { Component } from '@angular/core';
+    import {FormsModule} from '@angular/forms'
+    @Component({
+      selector: 'app-todolist',
+      imports: [FormsModule],
+      templateUrl: './todolist.component.html',
+      styleUrl: './todolist.component.css'
+    })
+    export class TodolistComponent {
+      name= ''
+    }
+  ```
+  + HTML:
+  ```
+    <input type="text" [(ngModel)]="name">
+  ```
+
+### Input và Output
+- Trong Angular, @Input() và @Output() là hai decorator quan trọng giúp trao đổi dữ liệu giữa các component cha và component con.
+- @Input(): Cho phép truyền dữ liệu từ component cha vào component con.
+- @Output(): Cho phép component con gửi sự kiện hoặc dữ liệu ngược lên component cha.
+- Cách sử dụng:
++ Ví dụ @Input:
+  ```
+    // Component Con
+    import { Component, Input } from '@angular/core';
+    @Component({
+      selector: 'app-child',
+      template: `<p>Giá trị nhận được: {{ data }}</p>`
+    })
+    export class ChildComponent {
+      @Input() data: string = '';
+    }
+  ```
+
+  ```
+    // Component Cha
+    import { Component } from '@angular/core';
+    @Component({
+      selector: 'app-root',
+      template: `<app-child [data]="parentData"></app-child>`
+    })
+    export class AppComponent {
+      parentData = 'value';
+    }
+  ```
++ Ví dụ @Output:
+  ```
+    // Component Con
+    import { Component, Output, EventEmitter } from '@angular/core';
+    @Component({
+      selector: 'app-child',
+      template: `<button (click)="sendData()">Gửi dữ liệu</button>`
+    })
+    export class ChildComponent {
+      @Output() dataEvent = new EventEmitter<string>();
+      sendData() {
+        this.dataEvent.emit('Dữ liệu từ Component Con!');
+      }
+    }
+  ```
+
+  ```
+    // Component Cha
+    import { Component } from '@angular/core';
+    @Component({
+      selector: 'app-root',
+      template: `
+        <app-child (dataEvent)="receiveData($event)"></app-child>
+      `
+    })
+    export class AppComponent {
+      receiveData(data: string) {
+        console.log(data)
+      }
+    }
+  ```
+
 ## Buổi 2:
 
 ### Cách tạo 1 component
