@@ -4,16 +4,22 @@ import { HeaderComponent } from './component/header/header.component';
 import { UserComponent } from "./component/user/user.component";
 import { TodolistComponent } from "./component/todolist/todolist.component";
 import { ProductComponent } from "./component/product/product.component";
+import { LifecycleComponent } from "./component/lifecycle/lifecycle.component";
 
 @Component({
   selector: 'app-root',
   // imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [TodolistComponent, ProductComponent]
+  imports: [TodolistComponent, ProductComponent, LifecycleComponent]
 })
 
 export class AppComponent {
+  value='chinhpd5'
+  handleChangeInput(){
+    this.value = 'chinhpd5 new'
+  }
+
   myName = 'chinhpd5'
   myAge = 25
   products = [
