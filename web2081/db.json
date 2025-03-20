@@ -1,0 +1,184 @@
+{
+  "products":[
+    {
+      "id": "1",
+      "name": "Laptop Dell XPS 13",
+      "price": 1200,
+      "sale_price": 999,
+      "status": "Còn hàng",
+      "image": "https://cdn.pixabay.com/photo/2015/01/09/11/09/laptop-594091_1280.jpg",
+      "category": "Laptop",
+      "rating": 4.5
+    },
+    {
+      "id": "2",
+      "name": "MacBook Air M2",
+      "price": 1300,
+      "sale_price": 1150,
+      "status": "Còn hàng",
+      "image": "https://cdn.pixabay.com/photo/2018/03/12/19/01/macbook-3213924_1280.jpg",
+      "category": "Laptop",
+      "rating": 4.8
+    },
+    {
+      "id": "3",
+      "name": "Samsung Galaxy S23",
+      "price": 1000,
+      "sale_price": 899,
+      "status": "Hết hàng",
+      "image": "https://cdn.pixabay.com/photo/2016/11/29/06/17/smartphone-1869510_1280.jpg",
+      "category": "Điện thoại",
+      "rating": 4.6
+    },
+    {
+      "id": "4",
+      "name": "iPhone 14 Pro",
+      "price": 1200,
+      "sale_price": 1100,
+      "status": "Còn hàng",
+      "image": "https://cdn.pixabay.com/photo/2017/09/16/18/46/iphone-2754825_1280.jpg",
+      "category": "Điện thoại",
+      "rating": 4.9
+    },
+    {
+      "id": "5",
+      "name": "Sony WH-1000XM5",
+      "price": 400,
+      "sale_price": 349,
+      "status": "Còn hàng",
+      "image": "https://cdn.pixabay.com/photo/2016/11/29/06/17/headphones-1868612_1280.jpg",
+      "category": "Âm thanh",
+      "rating": 4.7
+    },
+    {
+      "id": "6",
+      "name": "Bose SoundLink Revolve+",
+      "price": 299,
+      "sale_price": 249,
+      "status": "Còn hàng",
+      "image": "https://cdn.pixabay.com/photo/2016/06/07/17/21/speaker-1443459_1280.jpg",
+      "category": "Âm thanh",
+      "rating": 4.5
+    },
+    {
+      "id": "7",
+      "name": "Logitech MX Master 3S",
+      "price": 100,
+      "sale_price": 89,
+      "status": "Còn hàng",
+      "image": "https://cdn.pixabay.com/photo/2016/07/12/16/46/mouse-1516744_1280.jpg",
+      "category": "Phụ kiện",
+      "rating": 4.8
+    },
+    {
+      "id": "8",
+      "name": "Razer BlackWidow V4",
+      "price": 200,
+      "sale_price": 179,
+      "status": "Còn hàng",
+      "image": "https://cdn.pixabay.com/photo/2018/03/01/09/35/keyboard-3195744_1280.jpg",
+      "category": "Phụ kiện",
+      "rating": 4.7
+    },
+    {
+      "id": "9",
+      "name": "Samsung 32-inch 4K Monitor",
+      "price": 350,
+      "sale_price": 299,
+      "status": "Còn hàng",
+      "image": "https://cdn.pixabay.com/photo/2018/03/01/09/34/monitor-3195738_1280.jpg",
+      "category": "Màn hình",
+      "rating": 4.6
+    },
+    {
+      "id": "10",
+      "name": "Apple iPad Pro 12.9",
+      "price": 1100,
+      "sale_price": 999,
+      "status": "Còn hàng",
+      "image": "https://cdn.pixabay.com/photo/2017/02/05/16/27/ipad-2043666_1280.jpg",
+      "category": "Máy tính bảng",
+      "rating": 4.8
+    },
+    {
+      "id": "11",
+      "name": "Canon EOS R6",
+      "price": 2500,
+      "sale_price": 2299,
+      "status": "Còn hàng",
+      "image": "https://cdn.pixabay.com/photo/2016/11/22/19/22/camera-1850183_1280.jpg",
+      "category": "Máy ảnh",
+      "rating": 4.9
+    },
+    {
+      "id": "12",
+      "name": "Sony Alpha A7 III",
+      "price": 2000,
+      "sale_price": 1899,
+      "status": "Còn hàng",
+      "image": "https://cdn.pixabay.com/photo/2017/07/06/14/45/camera-2472475_1280.jpg",
+      "category": "Máy ảnh",
+      "rating": 4.7
+    },
+    {
+      "id": "13",
+      "name": "GoPro Hero 11",
+      "price": 500,
+      "sale_price": 449,
+      "status": "Còn hàng",
+      "image": "https://cdn.pixabay.com/photo/2018/01/30/18/28/action-camera-3118785_1280.jpg",
+      "category": "Máy ảnh",
+      "rating": 4.6
+    },
+    {
+      "id": "14",
+      "name": "PlayStation 5",
+      "price": 600,
+      "sale_price": 550,
+      "status": "Hết hàng",
+      "image": "https://cdn.pixabay.com/photo/2016/12/25/17/02/game-console-1933297_1280.jpg",
+      "category": "Gaming",
+      "rating": 4.9
+    },
+    {
+      "id": "15",
+      "name": "Xbox Series X",
+      "price": 500,
+      "sale_price": 479,
+      "status": "Còn hàng",
+      "image": "https://cdn.pixabay.com/photo/2020/07/10/17/52/controller-5393994_1280.jpg",
+      "category": "Gaming",
+      "rating": 4.8
+    },
+    {
+      "id": "16",
+      "name": "Nintendo Switch OLED",
+      "price": 350,
+      "sale_price": 329,
+      "status": "Còn hàng",
+      "image": "https://cdn.pixabay.com/photo/2018/03/02/17/41/game-console-3196845_1280.jpg",
+      "category": "Gaming",
+      "rating": 4.7
+    },
+    {
+      "id": "17",
+      "name": "DJI Mini 3 Pro",
+      "price": 800,
+      "sale_price": 749,
+      "status": "Còn hàng",
+      "image": "https://cdn.pixabay.com/photo/2017/09/02/17/44/drone-2704420_1280.jpg",
+      "category": "Thiết bị bay",
+      "rating": 4.8
+    },
+    {
+      "id": "18",
+      "name": "Apple Watch Series 9",
+      "price": 400,
+      "sale_price": 379,
+      "status": "Còn hàng",
+      "image": "https://cdn.pixabay.com/photo/2017/08/06/11/57/smart-watch-2597517_1280.jpg",
+      "category": "Đồng hồ thông minh",
+      "rating": 4.9
+    }
+  ]
+}
