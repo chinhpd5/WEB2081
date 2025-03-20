@@ -17,6 +17,6 @@ export class ProductService {
   }
 
   getById(id: string){
-    
+    return this.http.get<IProduct>(`${this.url}/${id}`)
   }
 }
