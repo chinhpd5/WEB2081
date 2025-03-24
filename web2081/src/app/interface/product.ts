@@ -8,3 +8,5 @@ export default interface IProduct {
   category: string
   rating: number
 }
+
+export type ProductAdd= Omit<IProduct,"id"|"sale_price"|"rating">
