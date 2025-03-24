@@ -2,6 +2,10 @@
 
 # WEB2081
 
+## Lịch chấm bài ASM1,lab thứ 4 ngày 26/3
+- Danh sách sản phẩm trang home (card)
+- Chi tiết sản phẩm (product detail)
+
 ## Buổi 4: Lifecycle và Router
 
 ### Angular Lifecycle Hooks
