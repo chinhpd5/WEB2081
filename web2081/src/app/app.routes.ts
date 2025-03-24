@@ -5,6 +5,9 @@ import { ProductsComponent } from './pages/products/products.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { ClientComponent } from './layout/client/client.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { AdminComponent } from './layout/admin/admin.component';
+import { ProductListComponent } from './pages/admin/product-list/product-list.component';
+import { ProductAddComponent } from './pages/admin/product-add/product-add.component';
 
 export const routes: Routes = [
   {
@@ -22,6 +25,13 @@ export const routes: Routes = [
       {
         path: 'product/:id', component :ProductDetailComponent
       }
+    ]
+  },
+  {
+    path: 'admin', component: AdminComponent,
+    children: [
+      {path: 'product', component: ProductListComponent},
+      {path: 'product/add', component: ProductAddComponent}
     ]
   },
   {
