@@ -1,6 +1,6 @@
 <div class="mx-auto bg-white p-6 rounded-lg shadow-md">
   <h2 class="text-2xl font-semibold mb-4">Thêm Sản Phẩm</h2>
-  <form (ngSubmit)="handleSubmit()" class="space-y-4">
+  <form #myForm="ngForm" (ngSubmit)="handleSubmit(myForm)" class="space-y-4">
     <div>
       <label class="block text-gray-700 font-medium mb-1">Tên sản phẩm</label>
       <input
@@ -9,7 +9,14 @@
         placeholder="Nhập tên sản phẩm"
         name="name"
         [(ngModel)]="product.name"
+        #name="ngModel"
+        required
+        minlength="3"
       />
+      <div *ngIf="name.invalid && (name.touched || myForm.submitted)">
+        <span class="text-red-500" *ngIf="name.errors?.['required']">Không để trống tên sản phẩm</span>
+        <span class="text-red-500" *ngIf="name.errors?.['minlength']">Cần tối thiểu 3 ký tự</span>
+      </div>
     </div>
 
     <div>
@@ -20,7 +27,14 @@
         placeholder="Nhập giá bán"
         name="price"
         [(ngModel)]="product.price"
+        #price="ngModel"
+        required
+        min="100"
       />
+      <div *ngIf="price.invalid && (price.touched || myForm.submitted)">
+        <span class="text-red-500" *ngIf="price.errors?.['required']">Không để trống giá bán</span>
+        <span class="text-red-500" *ngIf="price.errors?.['min']">Cần tối thiểu 100</span>
+      </div>
     </div>
 
     <div>
@@ -45,6 +59,8 @@
             [value]="true"
             name="status"
             [(ngModel)]="product.status"
+            #status="ngModel"
+            required
           />
           Còn hàng
         </label>
@@ -56,9 +72,14 @@
             [value]="false"
             name="status"
             [(ngModel)]="product.status"
+            #status="ngModel"
+            required
           />
           Hết hàng
         </label>
+        <div *ngIf="status.invalid && (status.touched || myForm.submitted)">
+          <span class="text-red-500" *ngIf="status.errors?.['required']">Không để trạng thái</span>
+        </div>
       </div>
     </div>
 
@@ -68,11 +89,16 @@
         class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300"
         name="category"
         [(ngModel)]="product.category"
+        #category="ngModel"
+        required
       >
         <option value="Laptop">Laptop</option>
         <option value="Mobile">Điện thoại</option>
         <option value="Phụ kiện">Phụ kiện</option>
       </select>
+      <div *ngIf="category.invalid && (category.touched || myForm.submitted)">
+        <span class="text-red-500" *ngIf="category.errors?.['required']">Không để danh mục</span>
+      </div>
     </div>
 
     <button
