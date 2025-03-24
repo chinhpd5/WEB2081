@@ -1,9 +1,9 @@
 export default interface IProduct {
   id: string
   name: string
-  price: number
+  price: number | null
   sale_price: number
-  status: boolean
+  status: boolean| null
   image: string
   category: string
   rating: number
