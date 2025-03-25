@@ -1,5 +1,5 @@
 {
-  "products":[
+  "products": [
     {
       "id": "1",
       "name": "Laptop Dell XPS 13",
@@ -179,6 +179,22 @@
       "image": "https://cdn.pixabay.com/photo/2017/08/06/11/57/smart-watch-2597517_1280.jpg",
       "category": "Đồng hồ thông minh",
       "rating": 4.9
+    },
+    {
+      "id": "d3ab",
+      "name": "chinhpd5",
+      "price": 123,
+      "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+      "category": "Laptop",
+      "status": true
+    },
+    {
+      "id": "f78c",
+      "name": "chinhpd5 new",
+      "price": 123,
+      "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+      "category": "Điện thoại",
+      "status": true
     }
   ]
 }

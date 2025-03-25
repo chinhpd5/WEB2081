@@ -1,10 +1,14 @@
-<form class=" p-6 bg-white shadow-md rounded-lg space-y-4">
+<form 
+  (ngSubmit)="handleSubmit()"
+  class=" p-6 bg-white shadow-md rounded-lg space-y-4">
   <div>
     <label class="block text-gray-700 font-medium">Tên sản phẩm</label>
     <input 
       type="text" 
       class="w-full mt-1 p-2 border rounded-lg focus:ring focus:ring-blue-300"
       placeholder="Nhập tên sản phẩm"
+      name="name"
+      [(ngModel)]="product.name"
     />
   </div>
 
@@ -14,6 +18,8 @@
       type="number" 
       class="w-full mt-1 p-2 border rounded-lg focus:ring focus:ring-blue-300"
       placeholder="Nhập giá bán"
+      name="price"
+      [(ngModel)]="product.price"
     />
   </div>
 
@@ -24,6 +30,8 @@
       type="text" 
       class="w-full mt-1 p-2 border rounded-lg file:bg-blue-500 file:text-white file:px-4 file:py-2 file:rounded-lg file:border-0"
       placeholder="Nhập hình ảnh"
+      name="image"
+      [(ngModel)]="product.image"
     />
   </div>
 
@@ -31,11 +39,19 @@
     <label class="block text-gray-700 font-medium">Trạng thái</label>
     <div class="mt-1 flex gap-4">
       <label class="flex items-center space-x-2">
-        <input type="radio" name="status" value="active" class="accent-blue-500" />
+        <input type="radio" name="status" class="accent-blue-500" 
+          [value]="true"
+          name="status"
+          [(ngModel)]="product.status"
+        />
         <span>Hoạt động</span>
       </label>
       <label class="flex items-center space-x-2">
-        <input type="radio" name="status" value="inactive" class="accent-blue-500" />
+        <input type="radio" name="status" class="accent-blue-500"
+          [value]="false"
+          name="status"
+          [(ngModel)]="product.status"
+        />
         <span>Không hoạt động</span>
       </label>
     </div>
@@ -43,10 +59,13 @@
 
   <div>
     <label class="block text-gray-700 font-medium">Danh mục</label>
-    <select class="w-full mt-1 p-2 border rounded-lg focus:ring focus:ring-blue-300">
-      <option value="electronics">Điện tử</option>
-      <option value="fashion">Thời trang</option>
-      <option value="home">Đồ gia dụng</option>
+    <select class="w-full mt-1 p-2 border rounded-lg focus:ring focus:ring-blue-300"
+      name="category"
+      [(ngModel)]="product.category"
+    >
+      <option value="Laptop">Lap top</option>
+      <option value="Điện thoại">Điện thoại</option>
+      <option value="Âm thanh">Đồ gia dụng</option>
     </select>
   </div>
 
