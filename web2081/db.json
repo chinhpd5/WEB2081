@@ -195,6 +195,14 @@
       "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
       "category": "Điện thoại",
       "status": true
+    },
+    {
+      "id": "0f39",
+      "name": "chinhpd5",
+      "price": 123,
+      "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+      "category": "Laptop",
+      "status": true
     }
   ]
 }
