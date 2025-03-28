@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "name": "Samsung Galaxy S23 update",
+      "name": "Samsung Galaxy S23",
       "price": 1000,
       "image": "https://cdn.pixabay.com/photo/2016/11/29/06/17/smartphone-1869510_1280.jpg",
       "status": false,
