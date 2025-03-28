@@ -26,7 +26,7 @@
           </td>
           <td class="px-4 py-2 border-b">{{item.category}}</td>
           <td class="px-4 py-2 border-b">
-              <button class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">Sửa</button>
+              <a [routerLink]="['edit',item.id]" class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">Sửa</a>
               <button (click)="handleDelete(item.id)" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 ml-2">Xóa</button>
           </td>
       </tr>

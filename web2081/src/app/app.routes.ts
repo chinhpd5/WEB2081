@@ -8,6 +8,7 @@ import { ProductDetailComponent } from './pages/product-detail/product-detail.co
 import { AdminComponent } from './layout/admin/admin.component';
 import { ProductListComponent } from './pages/admin/product-list/product-list.component';
 import { ProductAddComponent } from './pages/admin/product-add/product-add.component';
+import { ProductEditComponent } from './pages/admin/product-edit/product-edit.component';
 
 export const routes: Routes = [
   {
@@ -31,7 +32,8 @@ export const routes: Routes = [
     path: 'admin', component: AdminComponent,
     children: [
       {path: 'product', component: ProductListComponent},
-      {path: 'product/add', component: ProductAddComponent}
+      {path: 'product/add', component: ProductAddComponent},
+      {path: 'product/edit/:id', component: ProductEditComponent}
     ]
   },
   {
