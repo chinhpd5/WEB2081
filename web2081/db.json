@@ -1,26 +1,6 @@
 {
   "products": [
     {
-      "id": "1",
-      "name": "Laptop Dell XPS 13",
-      "price": 1200,
-      "sale_price": 999,
-      "status": true,
-      "image": "https://cdn.pixabay.com/photo/2015/01/09/11/09/laptop-594091_1280.jpg",
-      "category": "Laptop",
-      "rating": 4.5
-    },
-    {
-      "id": "2",
-      "name": "MacBook Air M2",
-      "price": 1300,
-      "sale_price": 1150,
-      "status": true,
-      "image": "https://cdn.pixabay.com/photo/2018/03/12/19/01/macbook-3213924_1280.jpg",
-      "category": "Laptop",
-      "rating": 4.8
-    },
-    {
       "id": "3",
       "name": "Samsung Galaxy S23",
       "price": 1000,
