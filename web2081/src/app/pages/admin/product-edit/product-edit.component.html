@@ -1,13 +1,14 @@
 
 <div class="mx-auto bg-white p-6 rounded-lg shadow-md">
   <h2 class="text-2xl font-semibold mb-4">Cập nhật Sản Phẩm</h2>
-  <form class="space-y-4">
+  <form [formGroup]="productForm" (ngSubmit)="handleSubmit()" class="space-y-4">
     <div>
       <label class="block text-gray-700 font-medium mb-1">Tên sản phẩm</label>
       <input
         type="text"
         class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300"
         placeholder="Nhập tên sản phẩm"
+        formControlName="name"
       />
     </div>
 
@@ -17,6 +18,7 @@
         type="number"
         class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300"
         placeholder="Nhập giá bán"
+        formControlName="price"
       />
       
     </div>
@@ -27,6 +29,7 @@
         type="text"
         class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300"
         placeholder="Nhập hình ảnh"
+        formControlName="image"
       />
     </div>
 
@@ -40,6 +43,7 @@
             class="mr-2"
             [value]="true"
             name="status"
+            formControlName="status"
           />
           Còn hàng
         </label>
@@ -50,6 +54,7 @@
             class="mr-2"
             [value]="false"
             name="status"
+            formControlName="status"
           />
           Hết hàng
         </label>
@@ -61,10 +66,10 @@
       <label class="block text-gray-700 font-medium mb-1">Danh mục</label>
       <select
         class="w-full px-4 py-2 border rounded-lg focus:ring focus:ring-blue-300"
-        required
+        formControlName="category"
       >
         <option value="Laptop">Laptop</option>
-        <option value="Mobile">Điện thoại</option>
+        <option value="Điện thoại">Điện thoại</option>
         <option value="Phụ kiện">Phụ kiện</option>
       </select>
       
@@ -74,7 +79,7 @@
       type="submit"
       class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition"
     >
-      Thêm sản phẩm
+      Cập nhật sản phẩm
     </button>
   </form>
 </div>
