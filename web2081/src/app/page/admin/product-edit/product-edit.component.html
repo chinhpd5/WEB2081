@@ -9,7 +9,15 @@
           <input type="text" 
             formControlName="name"
             class="w-full p-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-300">
-        </div>
+            <div *ngIf="productForm.get('name')?.invalid && productForm.get('name')?.touched">
+              <span *ngIf="productForm.get('name')?.errors?.['required']" class="text-red-500">
+                Không để trống tên sản phẩm
+              </span>
+              <span *ngIf="productForm.get('name')?.errors?.['minlength']" class="text-red-500">
+                Cần tối thiểu 6 ký tự
+              </span>
+            </div>
+          </div>
 
       <!-- Giá bán -->
       <div class="mb-4">
@@ -17,6 +25,14 @@
           <input type="number" 
             formControlName="price"
             class="w-full p-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-300">
+            <div *ngIf="productForm.get('price')?.invalid && productForm.get('price')?.touched">
+              <span *ngIf="productForm.get('price')?.errors?.['required']" class="text-red-500">
+                Không để trống giá bán
+              </span>
+              <span *ngIf="productForm.get('price')?.errors?.['min']" class="text-red-500">
+                Cần tối thiểu 100
+              </span>
+            </div>
         </div>
 
       <!-- Hình ảnh -->
@@ -25,6 +41,11 @@
           <input type="text" 
             formControlName="image"
             class="w-full p-2 border border-gray-300 rounded-lg">
+          <div *ngIf="productForm.get('image')?.invalid && productForm.get('image')?.touched">
+            <span *ngIf="productForm.get('image')?.errors?.['required']" class="text-red-500">
+              Không để trống hình ảnh
+            </span>
+          </div>
       </div>
 
       <!-- Trạng thái -->
@@ -47,6 +68,11 @@
                     class="mr-2"> 
                 Hết hàng
               </label>
+              <div *ngIf="productForm.get('status')?.invalid && productForm.get('status')?.touched">
+                <span *ngIf="productForm.get('status')?.errors?.['required']" class="text-red-500">
+                  Không để trống trạng thái
+                </span>
+              </div>
           </div>
       </div>
 
@@ -60,6 +86,11 @@
               <option value="Laptop">Máy tính</option>
               <option value="PK">Phụ kiện</option>
           </select>
+          <div *ngIf="productForm.get('category')?.invalid && productForm.get('category')?.touched">
+            <span *ngIf="productForm.get('category')?.errors?.['required']" class="text-red-500">
+              Không để trống danh mục
+            </span>
+          </div>
           
       </div>
 
