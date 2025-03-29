@@ -7,3 +7,40 @@
   class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:cursor-pointer hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75">
   Thêm mới
 </a>
+
+<div class="container mx-auto">
+  <h2 class="text-2xl font-bold mb-4">Danh sách sản phẩm</h2>
+  <div class="overflow-x-auto">
+      <table class="min-w-full bg-white shadow-md rounded-lg">
+          <thead>
+              <tr class="bg-gray-200 text-gray-700">
+                  <th class="py-3 px-4 text-left">STT</th>
+                  <th class="py-3 px-4 text-left">Tên sản phẩm</th>
+                  <th class="py-3 px-4 text-left">Giá bán</th>
+                  <th class="py-3 px-4 text-left">Hình ảnh</th>
+                  <th class="py-3 px-4 text-left">Trạng thái</th>
+                  <th class="py-3 px-4 text-left">Danh mục</th>
+                  <th class="py-3 px-4 text-left"></th>
+              </tr>
+          </thead>
+          <tbody>
+            @for (item of products; track $index) {
+              <tr class="border-t">
+                  <td class="py-3 px-4">{{$index+1}}</td>
+                  <td class="py-3 px-4">{{item.name}}</td>
+                  <td class="py-3 px-4">{{item.price}}</td>
+                  <td class="py-3 px-4">
+                    <img [src]="item.image" [alt]="item.name" class="w-12 h-12 object-cover">
+                  </td>
+                  <td class="py-3 px-4">
+                    <span [ngClass]="{'text-green-600': item.status, 'text-red-600': !item.status}" class="font-semibold">{{item.status ? "Còn hàng":"Hết hàng"}}</span>
+                  </td>
+                  <td class="py-3 px-4">{{item.category}}</td>
+                  <td class="py-3 px-4">
+                    <button (click)="handleDelete(item.id)" class="px-4 py-2 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:cursor-pointer hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75">Xóa</button>
+                  </td>
+              </tr>
+            }
+          </tbody>
+      </table>
+  </div>

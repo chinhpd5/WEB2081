@@ -23,4 +23,8 @@ export class ProductService {
   add(data: ProductAdd){
     return this.http.post(this.url,data)
   }
+
+  delete(id: string){
+    return this.http.delete(`${this.url}/${id}`)
+  }
 }
