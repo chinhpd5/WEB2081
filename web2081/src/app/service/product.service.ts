@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, retry } from 'rxjs';
 import IProduct, { ProductAdd } from '../interface/product';
 
 @Injectable({
@@ -22,5 +22,9 @@ export class ProductService {
 
   add(data: ProductAdd){
     return this.http.post(this.url,data)
+  }
+
+  delete(id: string){
+    return this.http.delete(`${this.url}/${id}`)
   }
 }
