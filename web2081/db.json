@@ -1,14 +1,12 @@
 {
   "products": [
     {
-      "id": "3",
-      "name": "Samsung Galaxy S23",
+      "name": "Samsung Galaxy S23 update",
       "price": 1000,
-      "sale_price": 899,
-      "status": false,
       "image": "https://cdn.pixabay.com/photo/2016/11/29/06/17/smartphone-1869510_1280.jpg",
-      "category": "Điện thoại",
-      "rating": 4.6
+      "status": false,
+      "category": "Mobile",
+      "id": "3"
     },
     {
       "id": "4",

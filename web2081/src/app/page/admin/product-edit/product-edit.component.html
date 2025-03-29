@@ -1,11 +1,13 @@
 <div class="bg-white p-3 rounded-lg shadow-lg w-full">
   <h2 class="text-2xl font-semibold mb-4 text-center">Cập nhật Sản Phẩm</h2>
-  <form >
+  <form [formGroup]="productForm"
+    (ngSubmit)="handleSubmit()"  
+  >
       <!-- Tên sản phẩm -->
       <div class="mb-4">
           <label class="block text-gray-700 font-medium mb-2">Tên sản phẩm</label>
           <input type="text" 
-            
+            formControlName="name"
             class="w-full p-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-300">
         </div>
 
@@ -13,14 +15,15 @@
       <div class="mb-4">
           <label class="block text-gray-700 font-medium mb-2">Giá bán</label>
           <input type="number" 
+            formControlName="price"
             class="w-full p-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-300">
-         
         </div>
 
       <!-- Hình ảnh -->
       <div class="mb-4">
           <label class="block text-gray-700 font-medium mb-2">Hình ảnh</label>
           <input type="text" 
+            formControlName="image"
             class="w-full p-2 border border-gray-300 rounded-lg">
       </div>
 
@@ -32,6 +35,7 @@
                   <input type="radio" 
                   name="status" 
                   [value]="true"
+                  formControlName="status"
                   class="mr-2"> 
                 Còn hàng
               </label>
@@ -39,6 +43,7 @@
                   <input type="radio" 
                     name="status" 
                     [value]="false"
+                    formControlName="status"
                     class="mr-2"> 
                 Hết hàng
               </label>
@@ -49,6 +54,7 @@
       <div class="mb-4">
           <label class="block text-gray-700 font-medium mb-2">Danh mục</label>
           <select name="category"
+            formControlName="category"
             class="w-full p-2 border border-gray-300 rounded-lg focus:ring focus:ring-blue-300">
               <option value="Mobile">Điện thoại</option>
               <option value="Laptop">Máy tính</option>
