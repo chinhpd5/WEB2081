@@ -38,6 +38,7 @@
                   <td class="py-3 px-4">{{item.category}}</td>
                   <td class="py-3 px-4">
                     <button (click)="handleDelete(item.id)" class="px-4 py-2 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:cursor-pointer hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-75">Xóa</button>
+                    <a [routerLink]="['edit',item.id]" class="px-4 py-2 bg-yellow-500 text-white font-semibold rounded-lg shadow-md hover:cursor-pointer hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-75">Sửa</a>
                   </td>
               </tr>
             }

@@ -8,6 +8,7 @@ import { ProductDetailComponent } from './page/product-detail/product-detail.com
 import { AdminComponent } from './layout/admin/admin.component';
 import { ProductListComponent } from './page/admin/product-list/product-list.component';
 import { ProductAddComponent } from './page/admin/product-add/product-add.component';
+import { ProductEditComponent } from './page/admin/product-edit/product-edit.component';
 
 export const routes: Routes = [
   {
@@ -21,7 +22,8 @@ export const routes: Routes = [
   {
     path: 'admin', component: AdminComponent, children:[
       {path: 'product', component: ProductListComponent},
-      {path: 'product/add', component: ProductAddComponent}
+      {path: 'product/add', component: ProductAddComponent},
+      {path: 'product/edit/:id', component: ProductEditComponent}
     ]
   },
   {path:'**', component: NotfoundComponent}
