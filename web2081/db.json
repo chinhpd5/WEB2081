@@ -11,14 +11,12 @@
       "rating": 4.6
     },
     {
-      "id": "4",
-      "name": "iPhone 14 Pro",
+      "name": "iPhone 14 Pro upadte",
       "price": 1200,
-      "sale_price": 1100,
-      "status": true,
       "image": "https://cdn.pixabay.com/photo/2017/09/16/18/46/iphone-2754825_1280.jpg",
+      "status": true,
       "category": "Điện thoại",
-      "rating": 4.9
+      "id": "4"
     },
     {
       "id": "5",

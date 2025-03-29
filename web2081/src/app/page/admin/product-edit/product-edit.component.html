@@ -1,5 +1,5 @@
 <h1>Cập nhật sản phẩm</h1>
-<form 
+<form [formGroup]="productForm" (ngSubmit)="handleSubmit()"
   class=" p-6 bg-white shadow-md rounded-lg space-y-4">
   <div>
     <label class="block text-gray-700 font-medium">Tên sản phẩm</label>
@@ -7,6 +7,7 @@
       type="text" 
       class="w-full mt-1 p-2 border rounded-lg focus:ring focus:ring-blue-300"
       placeholder="Nhập tên sản phẩm"
+      formControlName="name"
     />
   </div>
 
@@ -16,6 +17,7 @@
       type="number" 
       class="w-full mt-1 p-2 border rounded-lg focus:ring focus:ring-blue-300"
       placeholder="Nhập giá bán"
+      formControlName="price"
     />
   </div>
 
@@ -26,6 +28,7 @@
       type="text" 
       class="w-full mt-1 p-2 border rounded-lg file:bg-blue-500 file:text-white file:px-4 file:py-2 file:rounded-lg file:border-0"
       placeholder="Nhập hình ảnh"
+      formControlName="image"
     />
   </div>
 
@@ -36,6 +39,7 @@
         <input type="radio" name="status" class="accent-blue-500" 
           [value]="true"
           name="status"
+          formControlName="status" 
         />
         <span>Hoạt động</span>
       </label>
@@ -43,6 +47,7 @@
         <input type="radio" name="status" class="accent-blue-500"
           [value]="false"
           name="status"
+          formControlName="status" 
         />
         <span>Không hoạt động</span>
       </label>
@@ -51,7 +56,9 @@
 
   <div>
     <label class="block text-gray-700 font-medium">Danh mục</label>
-    <select class="w-full mt-1 p-2 border rounded-lg focus:ring focus:ring-blue-300"
+    <select 
+      formControlName="category" 
+      class="w-full mt-1 p-2 border rounded-lg focus:ring focus:ring-blue-300"
     >
       <option value="Laptop">Lap top</option>
       <option value="Điện thoại">Điện thoại</option>
