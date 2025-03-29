@@ -9,6 +9,14 @@
       placeholder="Nhập tên sản phẩm"
       formControlName="name"
     />
+    <div *ngIf="productForm.get('name')?.invalid && productForm.get('name')?.touched">
+      <span *ngIf="productForm.get('name')?.errors?.['required']" class="text-red-500">
+        Không để trống tên sản phẩm
+      </span>
+      <span *ngIf="productForm.get('name')?.errors?.['minlength']" class="text-red-500">
+        Cần tối thiểu 6 ký tự
+      </span>
+    </div>
   </div>
 
   <div>
@@ -19,6 +27,14 @@
       placeholder="Nhập giá bán"
       formControlName="price"
     />
+    <div *ngIf="productForm.get('price')?.invalid && productForm.get('price')?.touched">
+      <span *ngIf="productForm.get('price')?.errors?.['required']" class="text-red-500">
+        Không để trống tên giá bán
+      </span>
+      <span *ngIf="productForm.get('price')?.errors?.['min']" class="text-red-500">
+        Cần tối thiểu 100
+      </span>
+    </div>
   </div>
 
   <div>
@@ -30,6 +46,11 @@
       placeholder="Nhập hình ảnh"
       formControlName="image"
     />
+    <div *ngIf="productForm.get('image')?.invalid && productForm.get('image')?.touched">
+      <span *ngIf="productForm.get('image')?.errors?.['required']" class="text-red-500">
+        Không để trống hình ảnh
+      </span>
+    </div>
   </div>
 
   <div>
@@ -51,6 +72,11 @@
         />
         <span>Không hoạt động</span>
       </label>
+      <div *ngIf="productForm.get('status')?.invalid && productForm.get('status')?.touched">
+        <span *ngIf="productForm.get('status')?.errors?.['required']" class="text-red-500">
+          Không để trống trạng thái
+        </span>
+      </div>
     </div>
   </div>
 
@@ -64,7 +90,11 @@
       <option value="Điện thoại">Điện thoại</option>
       <option value="Âm thanh">Đồ gia dụng</option>
     </select>
-   
+    <div *ngIf="productForm.get('category')?.invalid && productForm.get('category')?.touched">
+      <span *ngIf="productForm.get('category')?.errors?.['required']" class="text-red-500">
+        Không để trống danh mục
+      </span>
+    </div>
   </div>
 
   <button 
