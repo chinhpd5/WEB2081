@@ -28,9 +28,11 @@ export class RegisterComponent {
   handleSubmit(){
     // console.log(this.authForm.invalid);
 
-    if(this.authForm.invalid)
+    if(this.authForm.invalid){
       this.authForm.markAllAsTouched();// đánh dấu các input được chạm
-
+      return; // nếu có lỗi -> ngăn chặn code phía sau thực thi
+    }
+    
     // console.log(this.authForm.value);
     this.authService.register(this.authForm.value).subscribe({
       next: () =>{
