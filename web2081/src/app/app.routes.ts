@@ -11,6 +11,7 @@ import { ProductAddComponent } from './pages/admin/product-add/product-add.compo
 import { ProductEditComponent } from './pages/admin/product-edit/product-edit.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
+import { authGuard } from './guard/auth.guard';
 
 export const routes: Routes = [
   {
@@ -33,7 +34,7 @@ export const routes: Routes = [
     ]
   },
   {
-    path: 'admin', component: AdminComponent,
+    path: 'admin', component: AdminComponent, canActivate: [authGuard],
     children: [
       {path: 'product', component: ProductListComponent},
       {path: 'product/add', component: ProductAddComponent},
