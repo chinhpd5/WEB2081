@@ -9,6 +9,8 @@ import { AdminComponent } from './layout/admin/admin.component';
 import { ProductListComponent } from './page/admin/product-list/product-list.component';
 import { ProductAddComponent } from './page/admin/product-add/product-add.component';
 import { ProductEditComponent } from './page/admin/product-edit/product-edit.component';
+import { RegisterComponent } from './page/register/register.component';
+import { LoginComponent } from './page/login/login.component';
 
 export const routes: Routes = [
   {
@@ -16,7 +18,9 @@ export const routes: Routes = [
       {path:'', component: HomeComponent}, // trang chủ
       {path:'product', component: ProductsComponent}, // sản phẩm
       {path:'about', component: AboutComponent}, // about
-      {path:'product/:id', component: ProductDetailComponent}
+      {path:'product/:id', component: ProductDetailComponent},
+      {path:'register',component: RegisterComponent},
+      {path:'login',component: LoginComponent},
     ]
   },
   {
