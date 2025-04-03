@@ -35,8 +35,9 @@ export class LoginComponent {
     //code
     this.authService.login(this.authForm.value).subscribe({
       next: (data: any) =>{
-        // console.log(data);
+        console.log(data);
         localStorage.setItem('token',data.accessToken)
+        localStorage.setItem('user',JSON.stringify(data.user))
         alert("Đăng nhập thành công");
         this.router.navigate(['/'])
       },

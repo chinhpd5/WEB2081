@@ -187,6 +187,12 @@
       "password": "$2a$10$aIXK8wKeDLIV6FpikY8zyuTLPfkFGEhfizLKzX4a7e4SZgULvR8IK",
       "name": "chinhpd5",
       "id": 1
+    },
+    {
+      "email": "chinhpd51@fpt.edu.vn",
+      "password": "$2a$10$RZxGH/b3CpSxhskFhQQgv.DrsrOKv6sFZQHAgiOCCwkpLYtDEieoG",
+      "name": "chinhpd5",
+      "id": 2
     }
   ]
 }
