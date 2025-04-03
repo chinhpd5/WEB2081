@@ -181,5 +181,12 @@
       "status": true
     }
   ],
-  "users": []
+  "users": [
+    {
+      "email": "chinhpd5@fpt.edu.vn",
+      "password": "$2a$10$aIXK8wKeDLIV6FpikY8zyuTLPfkFGEhfizLKzX4a7e4SZgULvR8IK",
+      "name": "chinhpd5",
+      "id": 1
+    }
+  ]
 }
